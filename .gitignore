@@ -1,0 +1,6 @@
+#Ignore all except what is listed below as exceptions. Commit myself to git
+*
+!.gitignore
+
+#Included files (specified as exceptions to thhe general ignore rule !<filename>)
+!.vimrc
