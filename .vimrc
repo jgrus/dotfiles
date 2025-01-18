@@ -4,6 +4,9 @@ set number relativenumber
 set ruler
 syntax on 
 
+"use ö to toggle search highlights on and off
+nnoremap <silent><expr> ö (v:hlsearch ? ':nohls' : ':set hls')."<cr>"
+
 "use tab to cycle between las and current buffer in normal mode
 nnoremap <Tab> :b#<cr>
 
