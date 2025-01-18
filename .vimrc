@@ -1,6 +1,6 @@
 "General settings to make the editing windows look nicer
 set hidden
-set number
+set number relativenumber
 set ruler
 syntax on 
 
@@ -29,6 +29,27 @@ if !has('nvim')
 	nnoremap <leader>t <Cmd>terminal ++curwin<cr>
 	tnoremap  <Esc> <C-w>N
 endif
+
+"Terminalj settings
+augroup TerminalStuff
+	au!
+	"Turn off line numbers when in terminal mode
+	if has('nvim')
+		autocmd TermOpen * setlocal nonumber norelativenumber
+	endif
+	if !has('nvim')
+		autocmd TerminalOpen * setlocal nonumber norelativenumber
+	endif
+augroup end
+
+"Insert settings
+augroup InsertStuff
+	au!
+	"Turn off line numbers when in terminal mode
+	autocmd Insertenter,Focuslost * setlocal number norelativenumber
+	autocmd InsertLeave * set number relativenumber
+augroup end
+
 
 "Remap some easily accesible keys on the swedish qwerty to more useful symbols.
 "remap ≤ to the R pipe operator |>
