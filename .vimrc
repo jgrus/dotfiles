@@ -29,3 +29,9 @@ if !has('nvim')
 	nnoremap <leader>t <Cmd>terminal ++curwin<cr>
 	tnoremap  <Esc> <C-w>N
 endif
+
+"Remap some easily accesible keys on the swedish qwerty to more useful symbols.
+"remap ≤ to the R pipe operator |>
+"remap ± to the backslash \
+abbreviate ≤ \|>
+abbreviate ± \
