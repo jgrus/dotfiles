@@ -5,3 +5,4 @@
 #Included files (specified as exceptions to thhe general ignore rule !<filename>)
 !.vimrc
 !.zshrc
+!.config/nvim/init.vim
