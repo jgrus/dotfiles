@@ -18,5 +18,14 @@ nnoremap <leader>b :ls<cr>:b<space>
 let g:netrw_altfile=1
 nnoremap <leader>f <Cmd>b#<cr><Cmd>Explore<cr>
 
-"<t opens a terminal in the current window
-nnoremap <leader>t <Cmd>terminal++curwin<cr>
+"<t opens a terminal in the current window and maps <Esc> to enter 
+"normal mode. Configuration works on both vim and neovim
+if has('nvim')
+	nnoremap <leader>t <Cmd>terminal<cr>i
+	tnoremap <Esc> <C-\><C-n>
+endif
+
+if !has('nvim')
+	nnoremap <leader>t <Cmd>terminal ++curwin<cr>
+	tnoremap  <Esc> <C-w>N
+endif
