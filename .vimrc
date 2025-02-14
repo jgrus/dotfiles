@@ -29,7 +29,7 @@ if has('nvim')
 endif
 
 if !has('nvim')
-	nnoremap <leader>t <Cmd>terminal ++curwin<cr>
+	nnoremap <leader>t <Cmd>terminal ++curwin<cr>i
 	tnoremap  <Esc> <C-w>N
 endif
 
@@ -51,8 +51,15 @@ augroup InsertStuff
 	"Turn off line numbers when in terminal mode
 	autocmd Insertenter,Focuslost * setlocal number norelativenumber
 	autocmd InsertLeave * set number relativenumber
+	"8 char wide tabs in makefiles
+	autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
 augroup end
 
+"Tabs are spaces and they are 4 spaces wide
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 
 "Remap some easily accesible keys on the swedish qwerty to more useful symbols.
 "remap ≤ to the R pipe operator |>
