@@ -11,7 +11,7 @@ nnoremap <silent><expr> ö (v:hlsearch ? ':nohls' : ':set hls')."<cr>"
 nnoremap <Tab> :b#<cr>
 
 "Map leader to <, which is comfortable on the swedish keyboard
-let mapleader="<"
+let mapleader=" "
 
 "map <b to a simle buffer selecion screen
 nnoremap <leader>b :ls<cr>:b<space>
