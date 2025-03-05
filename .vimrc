@@ -3,6 +3,7 @@ set hidden
 set number relativenumber
 set ruler
 syntax on 
+colorscheme desert
 
 "use ö to toggle search highlights on and off
 nnoremap <silent><expr> ö (v:hlsearch ? ':nohls' : ':set hls')."<cr>"
