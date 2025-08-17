@@ -56,6 +56,13 @@ augroup InsertStuff
 	autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
 augroup end
 
+"Automatic saving of views
+augroup AutoView
+	au!
+        autocmd BufWinLeave *.* mkview
+        autocmd BufWinEnter *.* silent loadview
+augroup end
+
 "Tabs are spaces and they are 4 spaces wide
 set tabstop=4
 set shiftwidth=4
