@@ -1,0 +1,8 @@
+[user]
+	name = Johan Sand
+[init]
+	defaultBranch = main
+[core]
+    editor = vim
+[alias]
+    graph = log --all --abbrev-commit --decorate --graph
