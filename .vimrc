@@ -2,9 +2,13 @@
 set hidden
 set number relativenumber
 set ruler
-set cursorline
 syntax on 
 colorscheme desert
+hi! Normal guibg=NONE ctermbg=NONE
+hi! EndOfBuffer guibg=NONE ctermbg=NONE
+set cursorline
+hi! CursorLine guibg=NONE ctermbg=NONE
+hi! CursorLine gui=underline cterm=underline
 
 "use ö to toggle search highlights on and off
 nnoremap <silent><expr> ö (v:hlsearch ? ':nohls' : ':set hls')."<cr>"
