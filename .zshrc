@@ -15,3 +15,4 @@ RPROMPT='${vcs_info_msg_0_}'
 #Aliases
 alias la="ls -lah"
 alias ~="pushd ~"
+alias R="R --no-save --no-restore"
