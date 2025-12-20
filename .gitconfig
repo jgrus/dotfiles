@@ -6,3 +6,4 @@
     editor = vim
 [alias]
     graph = log --all --abbrev-commit --decorate --graph
+    hs = log --pretty=format:\"%h %C(yellow)%ad%x09%C(red)%d %Creset%s\" --date=short
