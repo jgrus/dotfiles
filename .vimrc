@@ -79,3 +79,12 @@ set expandtab
 "remap ± to the backslash \
 abbreviate ≤ \|>
 abbreviate ± \
+
+"Latex abbreviations
+augroup latex_abbrevs
+    autocmd!
+    autocmd FileType plaintex,latex,tex iab bgn \begin{%%}<CR>\end{%%}<C-o>O<C-o>:-1,+1s/%%/
+    autocmd FileType plaintex,latex,tex iab ** \item
+    autocmd FileType plaintex,latex,tex iab cbx \colorbox{Goldenrod}{}<C-o>i
+    autocmd FileType plaintex,latex,tex iab ref \colorbox{Goldenrod}{(REF?)}
+augroup END
