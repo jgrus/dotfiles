@@ -9,9 +9,9 @@ hi! EndOfBuffer guibg=NONE ctermbg=NONE
 set cursorline
 hi! CursorLine guibg=NONE ctermbg=NONE
 hi! CursorLine gui=underline cterm=underline
-set statusline=\|\ %f\ %m\ \|\ %p%%\ \|%=%{strftime('%c')}\ \ 
+set statusline=\|%f%m\ %p%%%=%{strftime('%c')}\|
 set laststatus=2
-
+ 
 
 "use ö/; to toggle search highlights on and off
 nnoremap <silent><expr> <leader>ö (v:hlsearch ? ':nohls' : ':set hls')."<cr>"
