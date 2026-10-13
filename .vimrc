@@ -90,4 +90,7 @@ augroup latex_abbrevs
     autocmd FileType plaintex,latex,tex iab ** \item
     autocmd FileType plaintex,latex,tex iab cbx \colorbox{Goldenrod}{}<C-o>i
     autocmd FileType plaintex,latex,tex iab ref \colorbox{Goldenrod}{(REF?)}
+    autocmd FileType plaintex,latex,tex iab memsec \memsec{<C-o>:read !date<CR><C-h><esc>5wDi}<CR><esc>
 augroup end
+
+
