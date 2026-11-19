@@ -1,5 +1,6 @@
 [user]
 	name = Johan Sand
+	email = johan.sand@gu.se
 [init]
 	defaultBranch = main
 [core]
